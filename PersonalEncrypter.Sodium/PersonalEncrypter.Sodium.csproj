@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <RootNamespace>PersonalEncrypter.SodiumEncrypter</RootNamespace>
+    <AssemblyName>PersonalEncrypter.SodiumEncrypter</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sodium.Core" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PersonalEncrypter.Shared\PersonalEncrypter.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
