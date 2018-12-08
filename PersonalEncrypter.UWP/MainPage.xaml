@@ -5,12 +5,49 @@
     xmlns:local="using:PersonalEncrypter.UWP"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Windows10version1803="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 6)"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button Name="btnGenerate" Content="Generate" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top"/>
-        <Button Name="btnBrowse" Content="Browse" HorizontalAlignment="Left" Margin="710,175,0,0" VerticalAlignment="Top"/>
+        <NavigationView Windows10version1803:PaneTitle="Personal Encrypter">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Generate Keys" Tag="Generate_Keys">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE8D7;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
 
+                <NavigationViewItemHeader Content="Encrypt" />
+
+                <NavigationViewItem Content="Text" Tag="Encrypt_Text">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE72E;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="File" Tag="Encrypt_File">
+
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE72E;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItemHeader Content="Decrypt" />
+
+                <NavigationViewItem Content="Text" Tag="Decrypt_Text">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE785;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="File" Tag="Decrypt_File">
+
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE785;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+        </NavigationView>
     </Grid>
 </Page>
