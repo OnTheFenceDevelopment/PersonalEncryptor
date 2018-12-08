@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PersonalEncrypter.UWP.Views;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,18 @@ namespace PersonalEncrypter.UWP
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        {
+            var itemContent = args.InvokedItem as string;
+            if (itemContent != null)
+            {
+                if (itemContent == Constants.GenerateKeys)
+                {
+                    contentFrame.Navigate(typeof(GenerateKeys));
+                }
+            }
         }
     }
 }

@@ -10,7 +10,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <NavigationView Windows10version1803:PaneTitle="Personal Encrypter">
+        <NavigationView Windows10version1803:PaneTitle="Personal Encrypter" ItemInvoked="NavigationView_ItemInvoked">
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="Generate Keys" Tag="Generate_Keys">
                     <NavigationViewItem.Icon>
@@ -48,6 +48,7 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.MenuItems>
+            <Frame x:Name="contentFrame"></Frame>
         </NavigationView>
     </Grid>
 </Page>
