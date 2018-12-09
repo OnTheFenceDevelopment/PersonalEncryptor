@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PersonalEncrypter.Shared.Interfaces
+﻿namespace PersonalEncrypter.Shared.Interfaces
 {
     public interface IEncrypter
     {
