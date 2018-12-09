@@ -8,7 +8,20 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock>Generate Keys</TextBlock>
-    </Grid>
+    <RelativePanel Margin="25">
+        <CheckBox x:Name="chkSaveToFile" Content="Save to Disk"/>
+        <TextBlock x:Name="lblKeyname" RelativePanel.Below="chkSaveToFile">Key Name (optional)</TextBlock>
+        <TextBox x:Name="txtKeyName" RelativePanel.Below="lblKeyname" Width="150" IsEnabled="False"></TextBox>
+        <TextBlock x:Name="lblOutoutPath" RelativePanel.Below="txtKeyName" Margin="0, 10, 0, 0">Output Path</TextBlock>
+        <TextBox x:Name="txtOutputPath" RelativePanel.Below="lblOutoutPath" IsReadOnly="True" Background="LightGray" Width="350"></TextBox>
+        <Button  x:Name="btnBrowse" RelativePanel.RightOf="txtOutputPath" RelativePanel.Below="lblOutoutPath" Margin="15,0, 0, 0" IsEnabled="False">Browse</Button>
+
+        <CheckBox x:Name="chkDisplayOnScreen" Content="Display on Screen" RelativePanel.Below="txtOutputPath" Margin="0,25,0,0" />
+        <TextBlock x:Name="lblPrivateKey" RelativePanel.Below="chkDisplayOnScreen">Private Key</TextBlock>
+        <TextBox x:Name="txtPrivateKey" RelativePanel.Below="lblPrivateKey" RelativePanel.AlignRightWith="btnBrowse" RelativePanel.AlignLeftWithPanel="True" IsEnabled="False" IsReadOnly="True" Background="White"></TextBox>
+        <TextBlock x:Name="lblPublicKey" RelativePanel.Below="txtPrivateKey" Margin="0, 10, 0, 0">Public Key</TextBlock>
+        <TextBox x:Name="txtPublicKey" RelativePanel.Below="lblPublicKey" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWith="btnBrowse" IsEnabled="False" IsReadOnly="True" Background="White"></TextBox>
+
+        <Button x:Name="btnGenerate" Margin="10" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" IsEnabled="False">Generate</Button>
+    </RelativePanel>
 </Page>

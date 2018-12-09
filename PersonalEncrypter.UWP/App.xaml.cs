@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PersonalEncrypter.SodiumEncypter;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -30,7 +31,11 @@ namespace PersonalEncrypter.UWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            Encrypter = new Encrypter();
         }
+
+        public Encrypter Encrypter { get; set; }
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

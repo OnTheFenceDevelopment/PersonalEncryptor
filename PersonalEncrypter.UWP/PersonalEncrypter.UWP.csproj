@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PersonalEncrypter.UWP</RootNamespace>
     <AssemblyName>PersonalEncrypter.UWP</AssemblyName>
-    <DefaultLanguage>en-US</DefaultLanguage>
+    <DefaultLanguage>en-GB</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17134.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
@@ -162,6 +162,16 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.2</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PersonalEncrypter.Shared\PersonalEncrypter.Shared.csproj">
+      <Project>{c20df844-b4c6-4142-a7fa-b70fc1d20815}</Project>
+      <Name>PersonalEncrypter.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersonalEncrypter.Sodium\PersonalEncrypter.Sodium.csproj">
+      <Project>{16fb8360-3bc6-4424-8635-3ada8e5eb32e}</Project>
+      <Name>PersonalEncrypter.Sodium</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
