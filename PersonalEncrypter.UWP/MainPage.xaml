@@ -18,30 +18,24 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItemHeader Content="Encrypt" />
+                <NavigationViewItemHeader Content="Encryption" />
 
-                <NavigationViewItem Content="Text" Tag="Encrypt_Text">
+                <NavigationViewItem Content="Encrypt Text" Tag="Encrypt_Text">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE72E;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Content="File" Tag="Encrypt_File">
+                <NavigationViewItem Content="Encrypt File" Tag="Encrypt_File">
 
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE72E;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItemHeader Content="Decrypt" />
+                <NavigationViewItemHeader Content="Decryption" />
 
-                <NavigationViewItem Content="Text" Tag="Decrypt_Text">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE785;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-
-                <NavigationViewItem Content="File" Tag="Decrypt_File">
+                <NavigationViewItem Content="Encrypted Packet File" Tag="Decrypt_File">
 
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE785;" />

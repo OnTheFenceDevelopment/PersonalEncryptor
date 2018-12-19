@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="PersonalEncrypter.UWP.Views.EncryptText"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PersonalEncrypter.UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel Margin="25">
+        <TextBlock x:Name="lblPrivateKey" Text="Select your Private Key"/>
+        <TextBox x:Name="txtPrivateKey" RelativePanel.Below="lblPrivateKey" IsReadOnly="True" Width="350"></TextBox>
+        <Button  x:Name="btnPrivateKeyBrowse" RelativePanel.RightOf="txtPrivateKey" RelativePanel.Below="lblPrivateKey" Margin="15,0, 0, 0">Browse</Button>
+
+        <TextBlock x:Name="lblPublicKey" RelativePanel.Below="btnPrivateKeyBrowse" Text="Select Public Key (normally the recipient)" Margin="0, 10, 0, 0" />
+        <TextBox x:Name="txtPublicKey" RelativePanel.Below="lblPublicKey" IsReadOnly="True" Width="350"></TextBox>
+        <Button  x:Name="btnPublicKeyBrowse" RelativePanel.RightOf="txtPublicKey" RelativePanel.Below="lblPublicKey" Margin="15,0, 0, 0">Browse</Button>
+
+        <TextBlock x:Name="lblPlainText" RelativePanel.Below="btnPublicKeyBrowse" Margin="0, 10, 0, 0">Enter Plain Text</TextBlock>
+        <TextBox x:Name="txtPlainText" RelativePanel.Below="lblPlainText" Width="350" Height="75" TextWrapping="Wrap" AcceptsReturn="True"></TextBox>
+
+        <TextBlock x:Name="lblFilename" RelativePanel.Below="txtPlainText" Margin="0,10,0,0">Filename</TextBlock>
+        <TextBox x:Name="txtFilename" RelativePanel.Below="lblFilename" Width="350"></TextBox>
+
+        <TextBlock x:Name="lblOutputPath" RelativePanel.Below="txtFilename" Margin="0, 10, 0, 0">Output Path</TextBlock>
+        <TextBox x:Name="txtOutputPath" RelativePanel.Below="lblOutputPath" IsReadOnly="True" Background="LightGray" Width="350"></TextBox>
+        <Button  x:Name="btnOutputBrowse" RelativePanel.RightOf="txtOutputPath" RelativePanel.Below="lblOutputPath" Margin="15,0, 0, 0">Browse</Button>
+        
+        <Button x:Name="btnEncryptText" Margin="10" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" IsEnabled="False">Encrypt</Button>
+    </RelativePanel>
+</Page>

@@ -24,6 +24,10 @@ namespace PersonalEncrypter.UWP
                 {
                     contentFrame.Navigate(typeof(GenerateKeys));
                 }
+                else if (itemContent == Constants.EncryptText)
+                {
+                    contentFrame.Navigate(typeof(EncryptText));
+                }
             }
         }
     }

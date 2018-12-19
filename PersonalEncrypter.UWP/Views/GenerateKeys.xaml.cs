@@ -55,7 +55,7 @@ namespace PersonalEncrypter.UWP.Views
 
                 if (privateKeyFileExists != null || publicKeyFileExists != null)
                 {
-                    ContentDialog overwriteExistingFilesDialog = new ContentDialog
+                    var overwriteExistingFilesDialog = new ContentDialog
                     {
                         Title = "Key(s) Exist in Output Location",
                         Content = "Overwrite key files with same name(s) in the specified output folder?",
